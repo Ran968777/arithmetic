@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
+/**
+ * 用一个集合存储每插入一个元素后的最小值(集合的大小=栈的大小)
+ */
 public class MinStack {
     private Integer min = Integer.MAX_VALUE;
     private Map<Integer, Integer> minMap;
@@ -60,26 +63,26 @@ public class MinStack {
 //        [[],[2147483646],[2147483646],[2147483647],[],[],[],[],[],[],[2147483647],[],[],[-2147483648],[],[],[],[]]
     public static void main(String[] args) {
         MinStack minStack = new MinStack();
-        minStack.push(2147483646);
-        minStack.push(2147483646);
-        minStack.push(2147483647);
-        System.out.println(minStack.top());
-        minStack.pop();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+//        System.out.println(minStack.top());
+//        minStack.pop();
         System.out.println(minStack.min());
-
+//
         minStack.pop();
-        System.out.println(minStack.min());
-        minStack.pop();
-
-        minStack.push(2147483647);
-        System.out.println(minStack.top());
-        System.out.println(minStack.min());
-
-        minStack.push(-2147483648);
+//        System.out.println(minStack.min());
+//        minStack.pop();
+//
+//        minStack.push(2147483647);
         System.out.println(minStack.top());
         System.out.println(minStack.min());
-        minStack.pop();
-        System.out.println(minStack.min());
+//
+//        minStack.push(-2147483648);
+//        System.out.println(minStack.top());
+//        System.out.println(minStack.min());
+//        minStack.pop();
+//        System.out.println(minStack.min());
 
 
     }
