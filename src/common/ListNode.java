@@ -18,4 +18,15 @@ public class ListNode {
         val = x;
         this.next = next;
     }
+
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < 3000; i++) {
+
+
+          sb.append("帅");
+        }
+        System.out.println(sb);
+    }
 }
