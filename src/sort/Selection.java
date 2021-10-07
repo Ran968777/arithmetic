@@ -10,25 +10,27 @@ package sort;
 public class Selection {
 
     /**
-     * 选择最小的数，放在最前面
+     * 选择最小的数，放在已有序序列的最后
      *
      * @param arr
      * @return
      */
     public static Integer[] sol(Integer[] arr) {
-        int minIndex, temp;
-        for (int i = 0; i < arr.length; i++) {
+        int i, j;
+        // 最小值的下标
+        int minIndex;
+        for (i = 0; i < arr.length; i++) {
             minIndex = i;
             // 找到最小的下标
-            for (int j = i; j < arr.length; j++) {
+            for (j = i; j < arr.length; j++) {
                 if (arr[minIndex] > arr[j]) {
                     minIndex = j;
                 }
             }
-            if (minIndex!=i){
-               temp =  arr[i];
-               arr[i] = arr[minIndex];
-               arr[minIndex] = temp;
+            if (minIndex != i) {
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
             }
         }
         return arr;
